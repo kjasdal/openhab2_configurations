@@ -1,0 +1,1 @@
+Switch	sPower	{ channel="samsungtv:tv:livingroom:power" }

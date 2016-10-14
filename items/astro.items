@@ -1,0 +1,2 @@
+DateTime tSunrise	{ channel="astro:sun:home:rise#start" }
+DateTime tSunset	{ channel="astro:sun:home:set#end" }

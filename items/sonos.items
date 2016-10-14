@@ -1,0 +1,11 @@
+Player BOOST_pControl	{ channel="sonos:PLAY1:BOOST:control" }
+String BOOST_tState	{ channel="sonos:PLAY1:BOOST:state" }
+Switch BOOST_sStop	{ channel="sonos:PLAY1:BOOST:stop" }
+
+Player HageL_pControl	{ channel="sonos:PLAY1:Hage_L:control" }
+String HageL_tState	{ channel="sonos:PLAY1:Hage_L:state" }
+Switch HageL_sStop	{ channel="sonos:PLAY1:Hage_L:stop" }
+
+Player HageR_pControl	{ channel="sonos:PLAY1:Hage_R:control" }
+String HageR_tState	{ channel="sonos:PLAY1:Hage_R:state" }
+Switch HageR_sStop	{ channel="sonos:PLAY1:Hage_R:stop" }

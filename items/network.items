@@ -1,0 +1,2 @@
+Switch GatewayOnline	{ channel="network:device:gateway:online" }
+Number GatewayTime 	{ channel="network:device:gateway:time" }
