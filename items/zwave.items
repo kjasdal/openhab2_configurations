@@ -1,0 +1,128 @@
+// -- LINE POWERED DEVICES -------------------------------------------------------------------------
+
+// Manufacturer:	Aeon Labs
+// Model:			HEM-G2 (Home Energy Meter G2)
+// Location:		First floor, corridor, fuse box
+
+Number		B01T001_nPower		{ channel="zwave:device:fdffd310:node16:meter_watts" }
+Number		B01T001_nEnergy		{ channel="zwave:device:fdffd310:node16:meter_kwh" }
+Number		B01T001_nVoltage	{ channel="zwave:device:fdffd310:node16:meter_voltage" }
+Number		B01T001_nCurrent	{ channel="zwave:device:fdffd310:node16:meter_current" }
+Switch		B01T001_sReset		{ channel="zwave:device:fdffd310:node16:meter_reset" }
+
+// Manufacturer:    Fibaro System
+// Model:           FGWPF-101 (Wall plug)
+// Location:        First floor, laundry room, washing machine
+
+Number		B01T002_nPower		{ channel="zwave:device:fdffd310:node8:meter_watts" }
+Number		B01T002_nEnergy		{ channel="zwave:device:fdffd310:node8:meter_kwh" }
+Switch		B01T002_sSwitch		{ channel="zwave:device:fdffd310:node8:switch_binary" }
+Switch		B01T002_sReset		{ channel="zwave:device:fdffd310:node8:meter_reset" }
+
+// Manufacturer:    Fibaro System
+// Model:           FGWPF-101 (Wall plug)
+// Location:        First floor, laundry room, clothes dryer
+
+Number		B01T003_nPower		{ channel="zwave:device:fdffd310:node9:meter_watts" }
+Number		B01T003_nEnergy		{ channel="zwave:device:fdffd310:node9:meter_kwh" }
+Switch		B01T003_sSwitch		{ channel="zwave:device:fdffd310:node9:switch_binary" }
+Switch		B01T003_sReset		{ channel="zwave:device:fdffd310:node9:meter_reset" }
+
+// Manufacturer:    Fibaro System
+// Model:           FGWPF-101 (Wall plug)
+// Location:        Second floor, kitchen , dishwasher
+
+Number		B01T004_nPower		{ channel="zwave:device:fdffd310:node15:meter_watts" }
+Number		B01T004_nEnergy		{ channel="zwave:device:fdffd310:node15:meter_kwh" }
+Switch		B01T004_sSwitch		{ channel="zwave:device:fdffd310:node15:switch_binary" }
+Switch		B01T004_sReset		{ channel="zwave:device:fdffd310:node15:meter_reset" }
+
+// Manufacturer:    Fibaro System
+// Model:           FGWPF-101 (Wall plug)
+// Location:        TBD
+
+Number		B01T005_nPower
+Number		B01T005_nEnergy
+Switch		B01T005_sSwitch
+Switch		B01T005_sReset
+
+// Manufacturer:    Fibaro System
+// Model:           FGWPF-101 (Wall plug)
+// Location:        TBD
+
+Number		B01T006_nPower
+Number		B01T006_nEnergy
+Switch		B01T006_sSwitch
+Switch		B01T006_sReset
+
+// Manufacturer:    Aeon Labs
+// Model:           Micro Smart Switch G2
+// Location:        First floor, corridor, outdoor lights
+
+Number		B01T007_nPower		{ channel="zwave:device:fdffd310:node12:meter_watts" }
+Number		B01T007_nEnergy		{ channel="zwave:device:fdffd310:node12:meter_kwh" }
+Number		B01T007_nVoltage	{ channel="zwave:device:fdffd310:node12:meter_voltage" }
+Number		B01T007_nCurrent	{ channel="zwave:device:fdffd310:node12:meter_current" }
+Switch		B01T007_sSwitch		{ channel="zwave:device:fdffd310:node12:switch_binary" }
+Switch		B01T007_sReset		{ channel="zwave:device:fdffd310:node12:meter_reset" }
+
+// Manufacturer:    Aeon Labs
+// Model:           Micro Smart Switch G2
+// Location:        Second floor, kitchen, outdoor lights
+
+Number		B01T008_nPower		{ channel="zwave:device:fdffd310:node17:meter_watts" }
+Number		B01T008_nEnergy		{ channel="zwave:device:fdffd310:node17:meter_kwh" }
+Number		B01T008_nVoltage	{ channel="zwave:device:fdffd310:node17:meter_voltage" }
+Number		B01T008_nCurrent	{ channel="zwave:device:fdffd310:node17:meter_current" }
+Switch		B01T008_sSwitch		{ channel="zwave:device:fdffd310:node17:switch_binary" }
+Switch		B01T008_sReset		{ channel="zwave:device:fdffd310:node17:meter_reset" }
+
+// -- BATTERY POWERED DEVICES ----------------------------------------------------------------------
+
+// Manufacturer:    Fibaro System
+// Model:           FGMS-001 (Motion sensor)
+// Location:        First floor, corridor
+
+Number		B01T101_nBattery
+Number		B01T101_nTemperature
+Number		B01T101_nIlluminance
+Contact		B01T101_cMotion
+Contact		B01T101_cAlarm // Tamper
+
+// Manufacturer:    Fibaro System
+// Model:           FGMS-001 (Motion sensor)
+// Location:        Second floor, living room
+
+Number		B01T102_nBattery
+Number		B01T102_nTemperature
+Number		B01T102_nIlluminance
+Contact		B01T102_cMotion
+Contact		B01T102_cAlarm // Tamper
+
+// Manufacturer:    Fibaro System
+// Model:           FGSD-002 (Smoke sensor)
+// Location:        First floor, corridor
+
+Number		B01T103_nBattery
+Number		B01T103_nTemperature
+Contact		B01T103_cSmoke
+Contact		B01T103_cHeat
+Contact		B01T103_cAlarm // Tamper
+
+// Manufacturer:    Fibaro System
+// Model:           FGSD-002 (Smoke sensor)
+// Location:        Second floor, living room
+
+Number		B01T104_nBattery
+Number		B01T104_nTemperature
+Contact		B01T104_cSmoke
+Contact		B01T104_cHeat
+Contact		B01T104_cAlarm // Tamper
+
+// Manufacturer:    Vision Security
+// Model:           ZG 8101 (Tilt sensor)
+// Location:        Garage, garage door
+
+Number		B01T105_nBattery
+Contact		B01T105_cTilt
+Contact		B01T105_cAlarm // Tamper

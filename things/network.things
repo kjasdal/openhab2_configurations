@@ -1,1 +1,20 @@
-network:device:gateway	[ hostname="192.168.100.1", port="0", retry="1", timeout="5000", refresh_interval="60000", use_system_ping="true", dhcplisten="true" ]
+// Binding:		    03 - Network
+
+// Thing:			001
+// Device name:     Home gateway
+// Location:        Attic (network cabinet)
+// Manufacturer:    Huawei
+// Model:           HG8245H
+
+// MAC address:		9c:37:f4:32:78:5c
+// IP address:		192.168.100.1
+
+network:device:B03T001	[ hostname="192.168.100.1", port="0", retry="1", timeout="5000", refresh_interval="60000", use_system_ping="true", dhcplisten="false" ]
+
+network:device:B03T004	[ hostname="192.168.100.15", port="0", retry="1", timeout="5000", refresh_interval="60000", use_system_ping="true", dhcplisten="false" ]
+
+network:device:google	[ hostname="www.google.com", port="80", retry="1", timeout="5000", refresh_interval="60000", use_system_ping="false", dhcplisten="false" ]
+network:device:get		[ hostname="www.get.no", port="80", retry="1", timeout="5000", refresh_interval="60000", use_system_ping="false", dhcplisten="false" ]
+network:device:dropbox	[ hostname="www.dropbox.com", port="80", retry="1", timeout="5000", refresh_interval="60000", use_system_ping="false", dhcplisten="false" ]
+network:device:yr		[ hostname="www.yr.no", port="80", retry="1", timeout="5000", refresh_interval="60000", use_system_ping="false", dhcplisten="false" ]
+network:device:nrk		[ hostname="www.nrk.no", port="80", retry="1", timeout="5000", refresh_interval="60000", use_system_ping="false", dhcplisten="false" ]

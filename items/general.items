@@ -1,0 +1,18 @@
+Switch		sNight
+Switch		sMorning
+Switch		sDay
+Switch		sEvening
+
+Switch      sDaylight
+
+Switch      sHome
+Switch      sAwake
+
+String      Alarm
+DateTime    LastAlarm
+
+String      Event
+DateTime    LastEvent
+
+Switch		sInternet
+DateTime	tInternetLastUpdate

@@ -1,0 +1,88 @@
+import org.joda.time.*
+
+rule "Initialize"
+when
+	System started
+then
+	val DateTime StartOfMorning = now.withTime(06, 0, 0, 0)
+	val DateTime StartOfDay = now.withTime(08, 0, 0, 0)
+	val DateTime StartOfEvening = now.withTime(21, 0, 0, 0)
+	val DateTime StartOfNight = now.withTime(23, 0, 0, 0)
+
+	logInfo("General", "Morning starts at " + StartOfMorning)
+	logInfo("General", "Day starts at " + StartOfDay)
+	logInfo("General", "Evening starts at " + StartOfEvening)
+	logInfo("General", "Night starts at " + StartOfNight)
+
+	if (now.isAfter(StartOfMorning) && now.isBefore(StartOfDay)) {
+		sMorning.postUpdate(ON)
+		logInfo("General", "It is currently morning")
+	}
+	else {
+		sMorning.postUpdate(OFF)
+	}
+
+	if (now.isAfter(StartOfDay) && now.isBefore(StartOfEvening)) {
+		logInfo("General", "It is currently day")
+		sDay.postUpdate(ON)
+	}
+	else {
+		sDay.postUpdate(OFF)
+	}
+
+	if (now.isAfter(StartOfEvening) && now.isBefore(StartOfNight)) {
+		logInfo("General", "It is currently evening")
+		sEvening.postUpdate(ON)
+	}
+	else {
+		sEvening.postUpdate(OFF)
+	}
+
+	if (now.isAfter(StartOfNight) && now.isBefore(StartOfMorning)) {
+		logInfo("General", "It is currently night")
+		sNight.postUpdate(ON)
+	}
+	else {
+		sNight.postUpdate(OFF)
+	}
+end
+
+rule "Start of morning"
+when
+	Time cron "0 0 6 * * ? *"
+then
+	sNight.postUpdate(OFF)
+	sMorning.postUpdate(ON)
+	logInfo("general", "Start of morning")
+	Event.postUpdate("Start of morning")
+end
+
+rule "Start of day"
+when
+	Time cron "0 0 8 * * ? *"
+then
+	sMorning.postUpdate(OFF)
+	sDay.postUpdate(ON)
+	logInfo("general", "Start of day")
+	Event.postUpdate("Start of day")
+end
+
+rule "Start of evening"
+when
+	Time cron "0 0 21 * * ? *"
+then
+	sDay.postUpdate(OFF)
+	sEvening.postUpdate(ON)
+	logInfo("general", "Start of evening")
+	Event.postUpdate("Start of evening")
+end
+
+rule "Start of night"
+when
+	Time cron "0 0 23 * * ? *"
+then
+	sEvening.postUpdate(OFF)
+	sNight.postUpdate(ON)
+	logInfo("general", "Start of night")
+	Event.postUpdate("Start of night")
+end

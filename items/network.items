@@ -1,2 +1,38 @@
-Switch GatewayOnline	{ channel="network:device:gateway:online" }
-Number GatewayTime 	{ channel="network:device:gateway:time" }
+// -- LAN (Ethernet) -------------------------------------------------------------------------------
+
+// Description:		Home gateway
+// Location:		Attic, network cabinet
+
+Switch B02T001_sOnline	{ channel="network:device:B03T001:online" }
+Number B02T001_nTime	{ channel="network:device:B03T001:time" }
+
+// Description:		Home controller
+// Location:		Attic, network cabinet
+
+Switch B02T002_sOnline
+Number B02T002_nTime
+
+// Description:		Desktop computer
+// Location:		First floor, office
+
+Switch B02T003_sOnline	{ channel="network:device:B03T004:online" }
+Number B02T003_nTime	{ channel="network:device:B03T004:time" }
+
+// -- LAN (Wi-Fi) ----------------------------------------------------------------------------------
+
+// -- WAN (Internet) -------------------------------------------------------------------------------
+
+Switch Google_sOnline	{ channel="network:device:google:online" }
+Number Google_nTime		{ channel="network:device:google:time" }
+
+Switch Get_sOnline		{ channel="network:device:get:online" }
+Number Get_nTime		{ channel="network:device:get:time" }
+
+Switch Dropbox_sOnline	{ channel="network:device:dropbox:online" }
+Number Dropbox_nTime	{ channel="network:device:dropbox:time" }
+
+Switch Yr_sOnline		{ channel="network:device:yr:online" }
+Number Yr_nTime			{ channel="network:device:yr:time" }
+
+Switch NRK_sOnline		{ channel="network:device:nrk:online" }
+Number NRK_nTime		{ channel="network:device:nrk:time" }

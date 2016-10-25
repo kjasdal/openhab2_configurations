@@ -1,0 +1,81 @@
+sitemap zwave label="Binding 01 - Z-Wave" {
+	Frame label="Things" {
+		Text	item=B01T001_tLastUpdate	label="B01T001 - Home Energy Meter [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T001_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T001_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Text	item=B01T001_nVoltage	label="Voltage [%.2f V]"		icon="energy"
+				Text	item=B01T001_nCurrent	label="Current [%.2f A]"		icon="energy"
+				Switch	item=B01T001_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+		
+		Text	item=B01T002_tLastUpdate	label="B01T002 - Wall Plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T002_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T002_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T002_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T002_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+		
+		Text	item=B01T003_tLastUpdate	label="B01T003 - Wall Plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T003_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T003_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T003_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T003_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+		
+		Text	item=B01T004_tLastUpdate	label="B01T004 - Wall Plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T004_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T004_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T004_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T004_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+
+		Text	item=B01T005_tLastUpdate	label="B01T005 - Wall Plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T005_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T005_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T005_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T005_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+
+		Text	item=B01T006_tLastUpdate	label="B01T006 - Wall Plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T006_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T006_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T006_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T006_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+
+		Text	item=B01T007_tLastUpdate	label="B01T007 - Smart Switch [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T007_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T007_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Text	item=B01T007_nVoltage	label="Voltage [%.2f V]"		icon="energy"
+				Text	item=B01T007_nCurrent	label="Current [%.2f A]"		icon="energy"
+				Switch	item=B01T007_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T007_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+
+		Text	item=B01T008_tLastUpdate	label="B01T008 - Smart Switch [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T008_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T008_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Text	item=B01T008_nVoltage	label="Voltage [%.2f V]"		icon="energy"
+				Text	item=B01T008_nCurrent	label="Current [%.2f A]"		icon="energy"
+				Switch	item=B01T008_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T008_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+		
+	}
+}
