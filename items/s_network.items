@@ -1,0 +1,7 @@
+Switch		Internet_sOnline
+DateTime	Internet_tLastUpdate
+
+Number		Internet_nLatency
+Number		Internet_nDownload
+Number		Internet_nUpload
+Switch		Internet_sUpdate

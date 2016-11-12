@@ -1,0 +1,12 @@
+sitemap s_network label="System : Network" {
+	Frame   label="Speedtest" {
+		Text	item=Internet_nLatency	label="Latency [%.3f ms]"
+		Text	item=Internet_nDownload	label="Download speed [%.2f Mbit/s]"
+		Text	item=Internet_nUpload	label="Upload speed [%.2f Mbit/s]"
+		Switch	item=Internet_sUpdate	label="Update"	icon="switch"	mappings=[ON=Run]
+	}
+	Frame   label="Internet" {
+		Switch	item=Internet_sOnline		label="Online"
+		Text	item=Internet_tLastUpdate	label="Last update [%1$td.%1$tm.%1$tY %1$tT]"
+	}
+}

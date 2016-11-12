@@ -1,0 +1,8 @@
+Number		Mains_nPower		{ channel="zwave:device:fdffd310:node16:meter_watts" }
+Number		Mains_nEnergy		{ channel="zwave:device:fdffd310:node16:meter_kwh" }
+Number		Mains_nVoltage		{ channel="zwave:device:fdffd310:node16:meter_voltage" }
+
+Number		Mains_nEnergy24h
+
+Number  	Mains_nPowerAverage
+Number  	Mains_nPowerAverageRatio

@@ -1,0 +1,10 @@
+rule "Update"
+when
+	System started or
+	Time midnight
+then
+	Mains_nEnergy24h.postUpdate(Mains_nEnergy.state as DecimalType)
+	B01T001_sReset.sendCommand(ON)
+	Thread::sleep(1000)
+	B01T001_sReset.sendCommand(ON)
+end

@@ -1,0 +1,126 @@
+sitemap b_zwave label="Binding : Z-Wave" {
+	Frame label="Line powered devices" {
+		Text	item=B01T001_tLastUpdate	label="B01T001 - Home energy meter [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T001_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T001_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Text	item=B01T001_nVoltage	label="Voltage [%.2f V]"		icon="energy"
+				Text	item=B01T001_nCurrent	label="Current [%.2f A]"		icon="energy"
+				Switch	item=B01T001_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+		
+		Text	item=B01T002_tLastUpdate	label="B01T002 - Wall plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T002_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T002_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T002_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T002_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+		
+		Text	item=B01T003_tLastUpdate	label="B01T003 - Wall plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T003_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T003_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T003_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T003_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+		
+		Text	item=B01T004_tLastUpdate	label="B01T004 - Wall plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T004_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T004_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T004_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T004_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+
+		Text	item=B01T005_tLastUpdate	label="B01T005 - Wall plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T005_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T005_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T005_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T005_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+
+		Text	item=B01T006_tLastUpdate	label="B01T006 - Wall plug [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T006_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T006_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Switch	item=B01T006_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T006_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+
+		Text	item=B01T007_tLastUpdate	label="B01T007 - Smart switch [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T007_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T007_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Text	item=B01T007_nVoltage	label="Voltage [%.2f V]"		icon="energy"
+				Text	item=B01T007_nCurrent	label="Current [%.2f A]"		icon="energy"
+				Switch	item=B01T007_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T007_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+
+		Text	item=B01T008_tLastUpdate	label="B01T008 - Smart switch [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T008_nPower		label="Power [%.1f W]"			icon="light-on"
+				Text	item=B01T008_nEnergy	label="Energy [%.2f kWh]"		icon="energy"
+				Text	item=B01T008_nVoltage	label="Voltage [%.2f V]"		icon="energy"
+				Text	item=B01T008_nCurrent	label="Current [%.2f A]"		icon="energy"
+				Switch	item=B01T008_sSwitch	label="Switch"					icon="switch"
+				Switch	item=B01T008_sReset		label="Reset"					icon="switch"		mappings=[ON=Reset]
+			}
+		}
+	}
+	Frame label="Battery powered devices" {
+		Text	item=B01T101_tLastUpdate	label="B01T101 - Motion sensor [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T101_nBattery		label="Battery [%d %%]"							icon="my_battery"
+				Text	item=B01T101_nTemperature	label="Temperature [%.2f C]"						
+				Text	item=B01T101_nIlluminance	label="Illuminance [%d Lux]"						
+				Text	item=B01T101_cMotion		label="Motion [%s]"								icon="contact"
+				Text	item=B01T101_cAlarm			label="Alarm [%s]"								icon="contact"
+			}
+		}		
+		Text	item=B01T102_tLastUpdate	label="B01T102 - Motion sensor [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T102_nBattery		label="Battery [%d %%]"							icon="my_battery"
+				Text	item=B01T102_nTemperature	label="Temperature [%.2f C]"						
+				Text	item=B01T102_nIlluminance	label="Illuminance [%d Lux]"						
+				Text	item=B01T102_cMotion		label="Motion [%s]"								icon="contact"
+				Text	item=B01T102_cAlarm			label="Alarm [%s]"								icon="contact"
+			}
+		}		
+		Text	item=B01T103_tLastUpdate	label="B01T103 - Smoke sensor [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T103_nBattery		label="Battery [%d %%]"							icon="my_battery"
+				Text	item=B01T103_nTemperature	label="Temperature [%.2f C]"						
+				Text	item=B01T103_cSmoke			label="Smoke [%s]"								icon="contact"
+				Text	item=B01T103_cHeat			label="Heat [%s]"								icon="contact"
+				Text	item=B01T103_cAlarm			label="Alarm [%s]"								icon="contact"
+			}
+		}
+		Text	item=B01T104_tLastUpdate	label="B01T104 - Smoke sensor [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T104_nBattery		label="Battery [%d %%]"							icon="my_battery"
+				Text	item=B01T104_nTemperature	label="Temperature [%.2f C]"
+				Text	item=B01T104_cSmoke			label="Smoke [%s]"								icon="contact"
+				Text	item=B01T104_cHeat			label="Heat [%s]"								icon="contact"
+				Text	item=B01T104_cAlarm			label="Alarm [%s]"								icon="contact"
+			}
+		}
+		Text	item=B01T105_tLastUpdate	label="B01T105 - Tilt sensor [%1$td.%1$tm.%1$tY %1$tT]" {
+			Frame label="Internal" {
+				Text	item=B01T105_nBattery		label="Battery [%d %%]"							icon="my_battery"
+				Text	item=B01T105_cTilt			label="Tilt [%s]"								icon="contact"
+				Text	item=B01T105_cAlarm			label="Alarm [%s]"								icon="contact"
+			}
+		}		
+
+	}
+}

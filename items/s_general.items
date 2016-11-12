@@ -14,5 +14,5 @@ DateTime    LastAlarm
 String      Event
 DateTime    LastEvent
 
-Switch		sInternet
-DateTime	tInternetLastUpdate
+// Test items below this point
+

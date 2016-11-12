@@ -1,0 +1,19 @@
+Number		ApplianceWashingMachine_nPower	{ channel="zwave:device:fdffd310:node8:sensor_power" }
+Switch		ApplianceWashingMachine_sPower	{ channel="zwave:device:fdffd310:node8:switch_binary" }
+Number		ApplianceWashingMachine_nMode
+
+Number		ApplianceClothesDryer_nPower	{ channel="zwave:device:fdffd310:node9:sensor_power" }
+Switch		ApplianceClothesDryer_sPower	{ channel="zwave:device:fdffd310:node9:switch_binary" }
+Number		ApplianceClothesDryer_nMode
+
+Number		ApplianceDishwasher_nPower		{ channel="zwave:device:fdffd310:node15:sensor_power" }
+Switch		ApplianceDishwasher_sPower		{ channel="zwave:device:fdffd310:node15:switch_binary" }
+Number		ApplianceDishwasher_nMode
+
+Number		ApplianceFreezer_nPower			{ channel="zwave:device:fdffd310:node22:sensor_power" }
+Switch		ApplianceFreezer_sPower			{ channel="zwave:device:fdffd310:node22:switch_binary" }
+Number		ApplianceFreezer_nMode
+
+Number		ApplianceWaterHeater_nPower		{ channel="zwave:device:fdffd310:node23:sensor_power" }
+Switch		ApplianceWaterHeater_sPower		{ channel="zwave:device:fdffd310:node23:switch_binary" }
+Number		ApplianceWaterHeater_nMode

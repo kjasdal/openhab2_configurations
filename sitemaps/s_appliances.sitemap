@@ -1,0 +1,27 @@
+sitemap s_appliances label="System : Appliances" {
+	Frame label="Washing machine" {
+		Text	item=ApplianceWashingMachine_nPower	label="Power [%.1f W]"
+		Switch	item=ApplianceWashingMachine_sPower	label="Power"
+		Text	item=ApplianceWashingMachine_nMode	label="Mode [MAP(appliance_mode.map):%s]"
+	}
+	Frame label="Clothes dryer" {
+		Text	item=ApplianceClothesDryer_nPower	label="Power [%.1f W]"
+		Switch	item=ApplianceClothesDryer_sPower	label="Power"
+		Text	item=ApplianceClothesDryer_nMode	label="Mode [MAP(appliance_mode.map):%s]"
+	}
+	Frame label="Dishwasher" {
+		Text	item=ApplianceDishwasher_nPower		label="Power [%.1f W]"
+		Switch	item=ApplianceDishwasher_sPower		label="Power"
+		Text	item=ApplianceDishwasher_nMode		label="Mode [MAP(appliance_mode.map):%s]"
+	}
+	Frame label="Freezer" {
+		Text	item=ApplianceFreezer_nPower		label="Power [%.1f W]"
+		Switch	item=ApplianceFreezer_sPower		label="Power"
+		Text	item=ApplianceFreezer_nMode			label="Mode [MAP(appliance_mode.map):%s]"
+	}
+	Frame label="Water heater" {
+		Text	item=ApplianceWaterHeater_nPower	label="Power [%.1f W]"
+		Switch	item=ApplianceWaterHeater_sPower	label="Power"
+		Text	item=ApplianceWaterHeater_nMode		label="Mode [MAP(appliance_mode.map):%s]"
+	}
+}

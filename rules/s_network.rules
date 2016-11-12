@@ -1,0 +1,45 @@
+rule "Internet - Connectivity"
+when
+	Item Google_sOnline received update or
+	Item Get_sOnline received update or
+	Item Dropbox_sOnline received update or
+	Item Yr_sOnline received update or
+	Item NRK_sOnline received update
+then
+	if ((Google_sOnline.state == OFF) && 
+		(Get_sOnline.state == OFF) && 
+		(Dropbox_sOnline.state == OFF) && 
+		(Yr_sOnline.state == OFF) && 
+		(NRK_sOnline.state == OFF)) {
+		sInternet.postUpdate(OFF)
+	}
+	else {
+		Internet_sOnline.postUpdate(ON)
+	}
+    Internet_tLastUpdate.postUpdate(new DateTimeType())
+end
+
+rule "Internet - Speed test"
+when
+	Time cron "0 0 * * * ? *" or // Every hour
+	Item Internet_sUpdate received command ON 
+then
+    logInfo("s_network", "Speedtest started")
+	var String speedtestOutput = executeCommandLine("/usr/local/bin/speedtest-cli@@--simple", 120*1000)
+	if (speedtestOutput.startsWith("Ping")) { 
+		var String[] results = speedtestOutput.split("\\r?\\n")
+	    var float latency	= new java.lang.Float(results.get(0).split(" ").get(1))
+	    var float download	= new java.lang.Float(results.get(1).split(" ").get(1))
+	    var float upload	= new java.lang.Float(results.get(2).split(" ").get(1))
+	    Internet_nLatency.postUpdate(latency)
+	    Internet_nDownload.postUpdate(download)
+	    Internet_nUpload.postUpdate(upload)
+	    logInfo("s_network", "Speedtest finished successfully")
+	}
+	else {
+	    Internet_nLatency.postUpdate(0.0)
+	    Internet_nDownload.postUpdate(0.0)
+	    Internet_nUpload.postUpdate(0.0)
+	    logError("s_network", "Speedtest failed. Output:\n" + speedtestOutput + "\n")
+	}
+end

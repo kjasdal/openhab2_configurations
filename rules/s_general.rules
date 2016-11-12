@@ -9,21 +9,21 @@ then
 	val DateTime StartOfEvening = now.withTime(21, 0, 0, 0)
 	val DateTime StartOfNight = now.withTime(23, 0, 0, 0)
 
-	logInfo("General", "Morning starts at " + StartOfMorning)
-	logInfo("General", "Day starts at " + StartOfDay)
-	logInfo("General", "Evening starts at " + StartOfEvening)
-	logInfo("General", "Night starts at " + StartOfNight)
+	logInfo("s_general", "Morning starts at " + StartOfMorning)
+	logInfo("s_general", "Day starts at " + StartOfDay)
+	logInfo("s_general", "Evening starts at " + StartOfEvening)
+	logInfo("s_general", "Night starts at " + StartOfNight)
 
 	if (now.isAfter(StartOfMorning) && now.isBefore(StartOfDay)) {
 		sMorning.postUpdate(ON)
-		logInfo("General", "It is currently morning")
+		logInfo("s_general", "It is currently morning")
 	}
 	else {
 		sMorning.postUpdate(OFF)
 	}
 
 	if (now.isAfter(StartOfDay) && now.isBefore(StartOfEvening)) {
-		logInfo("General", "It is currently day")
+		logInfo("s_general", "It is currently day")
 		sDay.postUpdate(ON)
 	}
 	else {
@@ -31,7 +31,7 @@ then
 	}
 
 	if (now.isAfter(StartOfEvening) && now.isBefore(StartOfNight)) {
-		logInfo("General", "It is currently evening")
+		logInfo("s_general", "It is currently evening")
 		sEvening.postUpdate(ON)
 	}
 	else {
@@ -39,7 +39,7 @@ then
 	}
 
 	if (now.isAfter(StartOfNight) && now.isBefore(StartOfMorning)) {
-		logInfo("General", "It is currently night")
+		logInfo("s_general", "It is currently night")
 		sNight.postUpdate(ON)
 	}
 	else {
@@ -53,7 +53,7 @@ when
 then
 	sNight.postUpdate(OFF)
 	sMorning.postUpdate(ON)
-	logInfo("general", "Start of morning")
+	logInfo("s_general", "Start of morning")
 	Event.postUpdate("Start of morning")
 end
 
@@ -63,7 +63,7 @@ when
 then
 	sMorning.postUpdate(OFF)
 	sDay.postUpdate(ON)
-	logInfo("general", "Start of day")
+	logInfo("s_general", "Start of day")
 	Event.postUpdate("Start of day")
 end
 
@@ -73,7 +73,7 @@ when
 then
 	sDay.postUpdate(OFF)
 	sEvening.postUpdate(ON)
-	logInfo("general", "Start of evening")
+	logInfo("s_general", "Start of evening")
 	Event.postUpdate("Start of evening")
 end
 
@@ -83,6 +83,6 @@ when
 then
 	sEvening.postUpdate(OFF)
 	sNight.postUpdate(ON)
-	logInfo("general", "Start of night")
+	logInfo("s_general", "Start of night")
 	Event.postUpdate("Start of night")
 end

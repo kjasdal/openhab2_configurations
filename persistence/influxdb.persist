@@ -1,0 +1,25 @@
+Strategies {
+	everyMinute	: "0 * * * * ?"
+	everyHour	: "0 0 * * * ?"
+}
+
+Items {
+	Mains_nPower, Mains_nVoltage	: strategy = everyChange, everyMinute
+
+	Mains_nEnergy24h				: strategy = everyUpdate
+
+	ApplianceWashingMachine_nPower	: strategy = everyChange, everyMinute
+	ApplianceClothesDryer_nPower	: strategy = everyChange, everyMinute
+	ApplianceDishwasher_nPower		: strategy = everyChange, everyMinute
+	ApplianceFreezer_nPower			: strategy = everyChange, everyMinute
+	ApplianceWaterHeater_nPower		: strategy = everyChange, everyMinute
+
+	Internet_nLatency				: strategy = everyChange, everyHour
+	Internet_nDownload				: strategy = everyChange, everyHour
+	Internet_nUpload				: strategy = everyChange, everyHour
+	
+	B01T101_nTemperature			: strategy = everyUpdate, everyMinute
+	B01T102_nTemperature			: strategy = everyUpdate, everyMinute
+	B01T103_nTemperature			: strategy = everyUpdate, everyHour
+	B01T104_nTemperature			: strategy = everyUpdate, everyHour
+}

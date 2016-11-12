@@ -1,0 +1,202 @@
+val Number	MODE_OFF = 0
+val Number	MODE_STANDBY = 1
+val Number	MODE_ACTIVE = 2
+val Number	MODE_FINISHED = 3
+
+var Timer	tApplianceWashingMachine = null
+var Timer	tApplianceClothesDryer = null
+var Timer	tApplianceDishwasher = null
+
+// -- WASHING MACHINE ------------------------------------------------------------------------------
+
+rule "Appliance - Washing machine - rule #1"
+when
+	System started or
+	Item ApplianceWashingMachine_nPower changed
+then
+	if (ApplianceWashingMachine_nPower.state == NULL) {
+		return false
+	}
+
+	if (ApplianceWashingMachine_nPower.state < 1.0) {
+		if (ApplianceWashingMachine_nMode.state != MODE_OFF) {
+			ApplianceWashingMachine_nMode.postUpdate(MODE_OFF)
+        	logInfo("s_appliances", "Washing machine : Off")
+		}
+	}
+	else if (ApplianceWashingMachine_nPower.state < 3.0) {
+		if (ApplianceWashingMachine_nMode.state != MODE_STANDBY) {
+			ApplianceWashingMachine_nMode.postUpdate(MODE_STANDBY)
+    	    logInfo("s_appliances", "Washing machine : Standby")
+		}
+	}
+	else {
+		if (ApplianceWashingMachine_nMode.state != MODE_ACTIVE) {
+			ApplianceWashingMachine_nMode.postUpdate(MODE_ACTIVE)
+    	    logInfo("s_appliances", "Washing machine : Active")
+		}
+	}
+end
+
+rule "Appliance - Washing machine - rule #2"
+when
+	Item ApplianceWashingMachine_nMode changed from MODE_ACTIVE to MODE_STANDBY
+then
+	tApplianceWashingMachine = createTimer(now.plusMinutes(5)) [|
+		logInfo("s_appliances", "Washing machine : Program finished")
+	]
+end
+
+rule "Appliance - Washing machine - rule #3"
+when
+	Item ApplianceWashingMachine_nMode changed from MODE_STANDBY
+then
+	tApplianceWashingMachine?.cancel()
+	tApplianceWashingMachine = null
+end
+
+// -- CLOTHES DRYER --------------------------------------------------------------------------------
+
+rule "Appliance - Clothes dryer - rule #1"
+when
+	System started or
+	Item ApplianceClothesDryer_nPower changed
+then
+	if (ApplianceClothesDryer_nPower.state == NULL) {
+		return false
+	}
+
+	if (ApplianceClothesDryer_nPower.state < 1.0) {
+		if (ApplianceClothesDryer_nMode.state != MODE_OFF) {
+			ApplianceClothesDryer_nMode.postUpdate(MODE_OFF)
+        	logInfo("s_appliances", "Clothes dryer : Off")
+		}
+	}
+	else if (ApplianceClothesDryer_nPower.state < 3.0) {
+		if (ApplianceClothesDryer_nMode.state != MODE_STANDBY) {
+			ApplianceClothesDryer_nMode.postUpdate(MODE_STANDBY)
+    	    logInfo("s_appliances", "Clothes dryer : Standby")
+		}
+	}
+	else {
+		if (ApplianceClothesDryer_nMode.state != MODE_ACTIVE) {
+			ApplianceClothesDryer_nMode.postUpdate(MODE_ACTIVE)
+    	    logInfo("s_appliances", "Clothes dryer : Active")
+		}
+	}
+end
+
+rule "Appliance - Clothes dryer - rule #2"
+when
+	Item ApplianceClothesDryer_nMode changed from MODE_ACTIVE to MODE_STANDBY
+then
+	tApplianceClothesDryer = createTimer(now.plusMinutes(5)) [|
+		logInfo("s_appliances", "Clothes dryer : Program finished")
+	]
+end
+
+rule "Appliance - Clothes dryer - rule #3"
+when
+	Item ApplianceClothesDryer_nMode changed from MODE_STANDBY
+then
+	tApplianceClothesDryer?.cancel()
+	tApplianceClothesDryer = null
+end
+
+// -- DISHWASHER -----------------------------------------------------------------------------------
+
+rule "Appliance - Dishwasher - rule #1"
+when
+	System started or
+	Item ApplianceDishwasher_nPower changed
+then
+	if (ApplianceDishwasher_nPower.state == NULL) {
+		return false
+	}
+
+	if (ApplianceDishwasher_nPower.state < 1.0) {
+		if (ApplianceDishwasher_nMode.state != MODE_OFF) {
+			ApplianceDishwasher_nMode.postUpdate(MODE_OFF)
+        	logInfo("s_appliances", "Dishwasher : Off")
+		}
+	}
+	else if (ApplianceDishwasher_nPower.state < 3.0) {
+		if (ApplianceDishwasher_nMode.state != MODE_STANDBY) {
+			ApplianceDishwasher_nMode.postUpdate(MODE_STANDBY)
+    	    logInfo("s_appliances", "Dishwasher : Standby")
+		}
+	}
+	else {
+		if (ApplianceDishwasher_nMode.state != MODE_ACTIVE) {
+			ApplianceDishwasher_nMode.postUpdate(MODE_ACTIVE)
+    	    logInfo("s_appliances", "Dishwasher : Active")
+		}
+	}
+end
+
+rule "Appliance - Dishwasher - rule #2"
+when
+	Item ApplianceDishwasher_nMode changed from MODE_ACTIVE to MODE_STANDBY
+then
+	tApplianceDishwasher = createTimer(now.plusMinutes(5)) [|
+		logInfo("s_appliances", "Dishwasher : Program finished")
+	]
+end
+
+rule "Appliance - Dishwasher - rule #3"
+when
+	Item ApplianceDishwasher_nMode changed from MODE_STANDBY
+then
+	tApplianceDishwasher?.cancel()
+	tApplianceDishwasher = null
+end
+
+// -- FREEZER --------------------------------------------------------------------------------------
+
+rule "Appliance - Freezer - rule #1"
+when
+	System started or
+	Item ApplianceFreezer_nPower changed
+then
+	if (ApplianceFreezer_nPower.state == NULL) {
+		return false
+	}
+
+	if (ApplianceFreezer_nPower.state < 1.0) {
+		if (ApplianceFreezer_nMode.state != MODE_OFF) {
+			ApplianceFreezer_nMode.postUpdate(MODE_OFF)
+    	    logInfo("s_appliances", "Freezer : Off")
+   	    }
+	}
+	else {
+		if (ApplianceFreezer_nMode.state != MODE_ACTIVE) {
+			ApplianceFreezer_nMode.postUpdate(MODE_ACTIVE)
+        	logInfo("s_appliances", "Freezer : Active")
+       	}
+	}
+end
+
+// -- WATER HEATER ---------------------------------------------------------------------------------
+
+rule "Appliance - Water heater - rule #1"
+when
+	System started or
+	Item ApplianceWaterHeater_nPower changed
+then
+	if (ApplianceWaterHeater_nPower.state == NULL) {
+		return false
+	}
+
+	if (ApplianceWaterHeater_nPower.state < 1.0) {
+		if (ApplianceWaterHeater_nMode.state != MODE_OFF) {
+			ApplianceWaterHeater_nMode.postUpdate(MODE_OFF)
+    	    logInfo("s_appliances", "Water heater : Off")
+   	    }
+	}
+	else {
+		if (ApplianceWaterHeater_nMode.state != MODE_ACTIVE) {
+			ApplianceWaterHeater_nMode.postUpdate(MODE_ACTIVE)
+        	logInfo("s_appliances", "Water heater : Active")
+       	}
+	}
+end

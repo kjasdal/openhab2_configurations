@@ -1,0 +1,29 @@
+sitemap b_network label="Binding : Network" {
+	Frame   label="Hosts" {
+		Text	item=B02T001_sOnline	label="B02T001 [MAP(online.map):%s]"
+		Text	item=B02T001_nTime		label="Response time [%.1f ms]"
+
+		Text	item=B02T002_sOnline	label="B02T002 [MAP(online.map):%s]"
+		Text	item=B02T002_nTime		label="Response time [%.1f ms]"
+
+		Text	item=B02T003_sOnline	label="B02T003 [MAP(online.map):%s]"
+		Text	item=B02T003_nTime		label="Response time [%.1f ms]"
+	}
+	
+	Frame   label="Websites" {
+		Text	item=Google_sOnline		label="www.google.com [MAP(online.map):%s]"
+		Text	item=Google_nTime		label="Response time [%.1f ms]"
+
+		Text	item=Dropbox_sOnline	label="www.dropbox.com [MAP(online.map):%s]"
+		Text	item=Dropbox_nTime		label="Response time [%.1f ms]"
+
+		Text	item=Get_sOnline		label="www.get.no [MAP(online.map):%s]"
+		Text	item=Get_nTime			label="Response time [%.1f ms]"
+
+		Text	item=Yr_sOnline			label="www.yr.no [MAP(online.map):%s]"
+		Text	item=Yr_nTime			label="Response time [%.1f ms]"
+
+		Text	item=NRK_sOnline		label="www.nrk.no [MAP(online.map):%s]"
+		Text	item=NRK_nTime			label="Response time [%.1f ms]"
+	}
+}
